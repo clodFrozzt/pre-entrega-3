@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Crédito para Autos</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>PRE ENTREGA 3</h1>
+        <p><strong>Encuesta de satisfacción<br>Claudio Zamorano<br>Comisión 57735</strong></p>
+        <h2>Simulador de Crédito para Autos</h1>
+        
+        <form id="simuladorForm">
+            <div class="section">
+                <h3>Información del Préstamo</h3>
+                <label for="monto">Valor del Auto ($ mínimo $ 50.000 y máximo $ 500.000):</label>
+                <input type="number" id="monto" name="monto" min="50000" max="500000" required>
+                
+                <label for="cuotas">Cantidad de Cuotas (mínimo 1 cuota y máximo 32 cuotas):</label>
+                <input type="number" id="cuotas" name="cuotas" min="1" max="32" required>
+                
+                <label for="combustible">Tipo de Combustible:</label>
+                <select id="combustible" name="combustible" required>
+                    <option value="">--Selecciona--</option>
+                    <option value="Gasolina">Gasolina</option>
+                    <option value="Diesel">Diesel</option>
+                </select>
+                
+                <button type="submit">Simular Crédito</button>
+            </div>
+        </form>
+        
+        <div id="resultados" class="section" style="display: none;">
+            <h3>Resultados del Préstamo</h3>
+            <p id="montoPrestamo"></p>
+            <p id="cuotasPrestamo"></p>
+            <p id="porcentajeCuotas"></p>
+            <p id="totalIntereses"></p>
+            <p id="totalPrestamo"></p>
+            <p id="montoCuota"></p>
+        </div>
+        
+        <div class="section">
+            <h3>Selecciona tu Auto</h3>
+            <label for="tipoCombustible">Tipo de Combustible:</label>
+            <select id="tipoCombustible" name="tipoCombustible" required>
+                <option value="">--Selecciona--</option>
+                <option value="Gasolina">Gasolina</option>
+                <option value="Diesel">Diesel</option>
+            </select>
+            <button id="elegirAutoBtn">Elegir Auto</button>
+        </div>
+        
+        <div id="autoElegido" class="section" style="display: none;">
+            <h3>Auto Elegido</h3>
+            <p></p>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
